@@ -21,6 +21,12 @@ jobs:
       - name: Unit tests
         run: go test ./... -cover
 
+      - name: Instasll gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
+      - name: Security check
+        run: gosec ./...
+
   style:
     name: Style
     runs-on: ubuntu-latest
