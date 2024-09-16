@@ -96,3 +96,8 @@ func main() {
 	log.Printf("Serving on port: %s\n", port)
 	log.Fatal(srv.ListenAndServe())
 }
+
+func useless() {
+	// gargage
+	// nothing to see here
+}
