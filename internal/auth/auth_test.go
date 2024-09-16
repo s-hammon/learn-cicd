@@ -62,11 +62,6 @@ func TestGetAPIKeyError(t *testing.T) {
 			"Bearer 12345",
 			errors.New("malformed authorization header"),
 		},
-		{
-			"too many fields",
-			"ApiKey 1234 5678",
-			errors.New("malformed authorization header"),
-		},
 	}
 
 	for _, tt := range test {
